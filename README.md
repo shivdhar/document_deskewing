@@ -2,7 +2,7 @@
 
 ## Task
 
-Given an arbitrary image containing text, rotate it such that the text is horizontal and the right side up.
+Given an arbitrary image containing text, rotate it such that the text is both horizontal and the "right side up".
 
 ## Approach
 
@@ -30,13 +30,33 @@ This was a good opportunity to explore Google Cloud's AI Vision APIs. We tried i
 
 ### Approach
 
+#### **View [04_gcp_vision.ipynb](04_gcp_vision.ipynb) for implementation and results.**
+
 - The basic idea is to obtain the orientation of text characters/words/sentences/blocks/paragraghs
 - Compare with the previous approaches of getting the orientation of the "image" as opposed to the text within it.
 - To do this, we need the bounding boxes of the text characters. This can be provided by GCP (as here) or with some other component, probably a neural network.
 
+### Further Work
+
+- The current output can be postprocessed with Hough to straighten the images with greater precision.
+
+- Given a dataset of correctly-aligned images, we can apply enough skewing/noising/other transforms to create a **self-supervised task** of predicting correct orientation, replacing the entire approach with a single model with image input and image/angle output.
+- 
 ## References and Further Reading
+
+### Papers
+
+- Huang K, Chen Z, Yu M, Yan X, Yin A. An Efficient Document Skew Detection Method Using Probability Model and Q Test. Electronics. 2020; 9(1):55. https://doi.org/10.3390/electronics9010055
+
+- Baviskar, D., Ahirrao, S., Potdar, V., & Kotecha, K. (2021). Efficient Automated Processing of the Unstructured Documents Using Artificial Intelligence: A Systematic Literature Review and Future Directions. IEEE Access, 9, 72894-72936.
+
+- Boiangiu, C., Dinu, O., Popescu, C., Constantin, N.V., & Petrescu, C. (2020). Voting-Based Document Image Skew Detection. Applied Sciences, 10, 2236.
+
+- Song, W., Zhu, J., Li, Y., & Chen, C. (2016). Image Alignment by Online Robust PCA via Stochastic Gradient Descent. IEEE Transactions on Circuits and Systems for Video Technology, 26, 1241-1250.
+
+
+### Blogs
 
 - https://github.com/zacharywhitley/awesome-ocr
 - https://becominghuman.ai/how-to-automatically-deskew-straighten-a-text-image-using-opencv-a0c30aed83df
 - https://medium.com/@9sphere/machine-vision-recipes-deskewing-document-images-e178278- https://www.pyimagesearch.com/2017/02/20/text-skew-correction-opencv-python/94c34
-
