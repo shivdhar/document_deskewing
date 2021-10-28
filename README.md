@@ -26,7 +26,7 @@ We looked at PaddleOCR which is near the top of the [Papers With Code leaderboar
 
 This was a good opportunity to explore Google Cloud's AI Vision APIs. We tried it and it gave remarkably accurate results, even for documents which had been completely flipped. Most importantly, the vertices it returns for bounding boxes were ordered, starting from the upper left corner of a text segment, ensuring that no matter what the orientation of the text, the correct angle could be calculated.
 
-- We try this approach in [04_gcp_vision.ipynb](04_gcp_vision.ipynb) and it gave remarkable results. Please see the results at the end of the notebook. Note: To run the notebook, an API key needs to generated and placed at `gcp_credentials.json`.
+- We try this approach in [04_gcp_vision.ipynb](04_gcp_vision.ipynb) and it gave remarkable results. Please see the results at the end of the notebook. Note: To run the notebook, an API key needs to be generated and placed at `gcp_credentials.json`.
 
 ### Approach
 
