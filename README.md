@@ -36,6 +36,12 @@ This was a good opportunity to explore Google Cloud's AI Vision APIs. We tried i
 - Compare with the previous approaches of getting the orientation of the "image" as opposed to the text within it.
 - To do this, we need the bounding boxes of the text characters. This can be provided by GCP (as here) or with some other component, probably a neural network.
 
+
+### Results
+
+- We were able to deskew all test images with a reasonable degree of precision.
+- This approach worked well even in cases where conventional line-detection approaches failed.
+
 ### Further Work
 
 - The current output can be postprocessed with Hough to straighten the images with greater precision.
