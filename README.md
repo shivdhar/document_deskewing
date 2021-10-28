@@ -22,7 +22,7 @@ These geometry-based techniques suffer from the flaw that while they understand 
 
 To solve this, we try to look at techniques which can recognize *text* instead of lines and detect their skewness accordingly.
 
-We looked at PaddleOCR which is near the top of the leaderboard for scene text detection. However, it only has a CLI-based interface which draws the bounding boxes in the image directly. More crucially, it failed to detect text in flipped and rotated documents.
+We looked at PaddleOCR which is near the top of the [Papers With Code leaderboard for scene text detection](https://paperswithcode.com/task/scene-text-recognition). However, it only has a CLI-based interface which draws the bounding boxes in the image directly. More crucially, it failed to detect text in flipped and rotated documents.
 
 This was a good opportunity to explore Google Cloud's AI Vision APIs. We tried it and it gave remarkably accurate results, even for documents which had been completely flipped. Most importantly, the vertices it returns for bounding boxes were ordered, starting from the upper left corner of a text segment, ensuring that no matter what the orientation of the text, the correct angle could be calculated.
 
