@@ -30,7 +30,7 @@ This was a good opportunity to explore Google Cloud's AI Vision APIs. We tried i
 
 ### Approach
 
-#### **View [04_gcp_vision.ipynb](04_gcp_vision.ipynb) for implementation and results.**
+#### **See [04_gcp_vision.ipynb](04_gcp_vision.ipynb) for implementation and results.**
 
 - The basic idea is to obtain the orientation of text characters/words/sentences/blocks/paragraghs
 - Compare with the previous approaches of getting the orientation of the "image" as opposed to the text within it.
@@ -39,9 +39,8 @@ This was a good opportunity to explore Google Cloud's AI Vision APIs. We tried i
 ### Further Work
 
 - The current output can be postprocessed with Hough to straighten the images with greater precision.
-
 - Given a dataset of correctly-aligned images, we can apply enough skewing/noising/other transforms to create a **self-supervised task** of predicting correct orientation, replacing the entire approach with a single model with image input and image/angle output.
-- 
+
 ## References and Further Reading
 
 ### Papers
